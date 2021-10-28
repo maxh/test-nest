@@ -2,7 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-"""cat """
+"""cat"""
 type GqlCat {
   id: ID!
   name: String!
@@ -10,6 +10,13 @@ type GqlCat {
   breed: String
 }
 
+"""pet owner"""
+type GqlPetOwner {
+  id: ID!
+  name: String!
+}
+
 type Query {
   cats: [GqlCat!]!
+  petOwners: [GqlPetOwner!]!
 }

@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { CatsController } from './cats.controller';
-import { CatsResolver } from './gql/cats.resolver';
+import { GqlCatResolver } from './gql/gql-cat.resolver';
 
 @Module({
   controllers: [CatsController],
-  providers: [CatsService, CatsResolver],
+  providers: [CatsService, GqlCatResolver],
 })
 export class CatsModule {}

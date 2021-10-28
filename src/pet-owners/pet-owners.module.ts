@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { PetOwnersService } from './pet-owners.service';
+import { PetOwnerService } from './pet-owner.service';
+import { GqlPetOwnerResolver } from './gql/gql-pet-owner.resolver';
 
 @Module({
-  providers: [PetOwnersService],
+  providers: [PetOwnerService, GqlPetOwnerResolver],
 })
 export class PetOwnersModule {}

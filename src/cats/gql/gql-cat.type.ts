@@ -1,6 +1,6 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 
-@ObjectType({ description: 'cat ' })
+@ObjectType({ description: 'cat' })
 export class GqlCat {
   @Field(type => ID)
   id: string;
