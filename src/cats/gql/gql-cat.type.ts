@@ -13,4 +13,8 @@ export class GqlCat {
 
   @Field({ nullable: true })
   breed?: string;
+
+  // Used by field resolvers.
+
+  ownerId?: string;
 }

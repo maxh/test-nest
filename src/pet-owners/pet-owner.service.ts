@@ -12,4 +12,11 @@ export class PetOwnerService {
   findAll(): PetOwner[] {
     return this.petOwners;
   }
+
+  findOne(petOwnerId: string): PetOwner {
+    return {
+      id: 'def',
+      name: 'reginald',
+    };
+  }
 }
