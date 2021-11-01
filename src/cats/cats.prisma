@@ -1,0 +1,7 @@
+model Cat {
+  id    String  @unique
+  name  String
+  age   Int
+  breed String
+  petOwnerId String
+}

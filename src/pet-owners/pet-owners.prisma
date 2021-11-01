@@ -1,0 +1,4 @@
+model PetOwner {
+  id    String  @unique
+  name  String
+}
