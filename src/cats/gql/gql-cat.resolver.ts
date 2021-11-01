@@ -1,6 +1,4 @@
 import {
-  Args,
-  Mutation,
   Parent,
   Query,
   ResolveField,
@@ -9,7 +7,6 @@ import {
 } from '@nestjs/graphql';
 import { CatsService } from '../cats.service';
 import { GqlCat } from './gql-cat.type';
-import { PetOwner } from '../../pet-owners/types/pet-owner.type';
 import { PetOwnerService } from '../../pet-owners/pet-owner.service';
 import { GqlPetOwner } from '../../pet-owners/gql/gql-pet-owner.type';
 
@@ -26,7 +23,7 @@ export class GqlCatResolver {
   }
 
   @ResolveField((returns) => GqlPetOwner)
-  owner(@Parent() parent: GqlCat): Promise<GqlPetOwner> {
-    return Promise.resolve(this.petOwnerService.findOne(parent.ownerId));
+  petOwner(@Parent() parent: GqlCat): Promise<GqlPetOwner> {
+    return Promise.resolve(this.petOwnerService.findOne(parent.petOwnerId));
   }
 }

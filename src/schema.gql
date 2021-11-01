@@ -8,7 +8,7 @@ type GqlCat {
   name: String!
   age: Float
   breed: String
-  owner: GqlPetOwner!
+  petOwner: GqlPetOwner!
 }
 
 """pet owner"""

@@ -16,5 +16,5 @@ export class GqlCat {
 
   // Used by field resolvers.
 
-  ownerId?: string;
+  petOwnerId?: string;
 }
